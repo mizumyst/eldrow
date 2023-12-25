@@ -1,0 +1,99 @@
+html {
+  margin: 0px;
+  height: 100%;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.game-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.letter {
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 2rem;
+  width: 2rem;
+  background-color: #57E389;
+  border: 2px solid #2EC27E;
+  border-radius: 8px;
+  user-select: none;
+  margin: 0.25rem;
+}
+
+.button {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 1rem;
+  background-color: #C0BFBC;
+  user-select: none;
+  border-radius: 8px;
+  margin: 1rem;
+  box-shadow: 0px 4px 0px #9A9996;
+  border: 2px solid #9A9996;
+}
+
+.button:active {
+  transform: translate(0px, 4px);
+  box-shadow: none;
+}
+
+.letter-button {
+  box-shadow: 0px 4px 0px #9A9996;
+}
+
+.letter-button:active {
+  transform: translate(0px, 4px);
+  box-shadow: none;
+}
+
+.none {
+  background-color: #C0BFBC;
+  box-shadow: 0px 4px 0px #9A9996;
+  border: 2px solid #9A9996;
+}
+
+.green {
+  background-color: #57E389;
+  box-shadow: 0px 4px 0px #2EC27E;
+  border: 2px solid #2EC27E;
+}
+
+.yellow {
+  background-color: #F6D32D;
+  box-shadow: 0px 4px 0px #E5A50A;
+  border: 2px solid #E5A50A;
+}
