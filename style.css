@@ -97,3 +97,16 @@ h1 {
   box-shadow: 0px 4px 0px #E5A50A;
   border: 2px solid #E5A50A;
 }
+
+.shake {
+  animation: skew-y-shake 1s forwards;
+}
+
+@keyframes skew-y-shake {
+  0% { transform: skewY(-5deg); }
+  5% { transform: skewY(5deg); }
+  10% { transform: skewY(-5deg); }
+  15% { transform: skewY(5deg); }
+  20% { transform: skewY(0deg); }
+  100% { transform: skewY(0deg); }  
+}

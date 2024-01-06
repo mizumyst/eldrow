@@ -95,12 +95,28 @@ function collectInput() {
 }
 
 function checkGuess() {
-  var guessedColors = collectInput()
-  var correctColors = determineResult(answer,guess)
+  var guessedColors = collectInput();
+  var correctColors = determineResult(answer,guess);
   console.log(guessedColors);
   console.log(correctColors);
-  alert(arrayEquals(guessedColors, correctColors));
-  return arrayEquals(guessedColors, correctColors);
+  updateCorrectIndicator(arrayEquals(guessedColors, correctColors));
+}
+
+function updateCorrectIndicator(isCorrect) {
+  var correctIndicator = document.getElementById("correctIndicator");
+  shake(correctIndicator);
+  if (isCorrect) {
+    correctIndicator.textContent = "correct!"
+    newGame();
+    return;
+  }
+  correctIndicator.textContent = "incorrect.";
+}
+
+function shake(element) {
+  element.classList.remove("shake");
+  element.offsetWidth; // trigger reflow
+  element.classList.add("shake");
 }
 
 function updateTime() {
@@ -129,5 +145,3 @@ function newGame() {
 }
 document.getElementById("check").addEventListener("click", checkGuess);
 document.getElementById("newGame").addEventListener("click", newGame);
-
-newGame();
